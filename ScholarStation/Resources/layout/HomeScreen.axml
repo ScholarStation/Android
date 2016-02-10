@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:text="Create Tutor Session"
+        android:layout_width="match_parent"
+        android:layout_height="73.5dp"
+        android:id="@+id/CreateTutorSession"
+        android:background="#ff039be5" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2">
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout3" />
+        <Button
+            android:text="Create Study Session"
+            android:layout_width="match_parent"
+            android:layout_height="73.0dp"
+            android:id="@+id/CreateStudySession"
+            android:background="#ff43a047" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout4" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <Button
+            android:text="Profile"
+            android:layout_width="match_parent"
+            android:layout_height="75.0dp"
+            android:id="@+id/ProfileButton"
+            android:background="#ff039be5" />
+    </LinearLayout>
+</LinearLayout>
