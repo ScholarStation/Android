@@ -22,6 +22,7 @@ namespace ScholarStation
 			SetContentView (Resource.Layout.HomeScreen);
 
 			Button profile = FindViewById<Button> (Resource.Id.ProfileButton);
+			Button createStudySession = FindViewById<Button> (Resource.Id.CreateStudySession);
 
 
 			var user= Intent.GetStringExtra("user");
@@ -48,6 +49,10 @@ namespace ScholarStation
 				StartActivity(intent);
 			};
 
+			createStudySession.Click += delegate(object sender, EventArgs e) {
+				Intent studySessionIntent = new Intent(this, typeof(StudySessionActivity));
+				StartActivity(studySessionIntent);
+			};
 			// Create your application here
 		}
 	}

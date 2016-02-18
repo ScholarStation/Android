@@ -60,6 +60,7 @@
     <Compile Include="LoginActivity.cs" />
     <Compile Include="LoginUtility.cs" />
     <Compile Include="ProfileUtility.cs" />
+    <Compile Include="StudySessionActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -81,6 +82,7 @@
     <AndroidResource Include="Resources\layout\StartScreen.axml" />
     <AndroidResource Include="Resources\drawable\ximd90I.jpg" />
     <AndroidResource Include="Resources\drawable\mriknow2.png" />
+    <AndroidResource Include="Resources\layout\StudySessionScreen.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
