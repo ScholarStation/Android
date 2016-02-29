@@ -138,14 +138,11 @@ namespace ScholarStation
 			// aapt resource value: 0x7f060020
 			public const int createSessionButton = 2131099680;
 			
+			// aapt resource value: 0x7f06001b
+			public const int date = 2131099675;
+			
 			// aapt resource value: 0x7f060017
 			public const int editProfile = 2131099671;
-			
-			// aapt resource value: 0x7f06001b
-			public const int editText1 = 2131099675;
-			
-			// aapt resource value: 0x7f06001d
-			public const int editText2 = 2131099677;
 			
 			// aapt resource value: 0x7f060028
 			public const int editTutorProfile = 2131099688;
@@ -185,6 +182,9 @@ namespace ScholarStation
 			
 			// aapt resource value: 0x7f06001f
 			public const int textView5 = 2131099679;
+			
+			// aapt resource value: 0x7f06001d
+			public const int time = 2131099677;
 			
 			static Id()
 			{

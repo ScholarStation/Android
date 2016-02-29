@@ -24,7 +24,7 @@ namespace ScholarStation
 			Console.WriteLine ("HELLLOOOO!>>?????");
 			var returnStuff =  client.Execute(req);
 			LoginResponse info = JsonConvert.DeserializeObject<LoginResponse> (returnStuff.Content);
-			//Console.WriteLine (info.KEY);
+			Console.WriteLine (info.KEY);
 
 			//var dict = JsonConvert.DeserializeObject<JsonArrayAttribute> (asd);
 			return info;
