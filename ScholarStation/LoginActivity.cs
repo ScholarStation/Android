@@ -7,7 +7,7 @@ using Android.Content;
 
 namespace ScholarStation
 {
-	[Activity (Label = "Log In")]	
+	[Activity (Theme="@android:style/Theme.Holo.Light", Label = "Log In")]	
 	public class LoginActivity : Activity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)

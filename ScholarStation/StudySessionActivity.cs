@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace ScholarStation
 {
-	[Activity (Label = "StudySessionActivity")]			
+	[Activity (Label = "StudySessionActivity", Theme="@android:style/Theme.Holo.Light")]			
 	public class StudySessionActivity : Activity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)
@@ -24,7 +24,7 @@ namespace ScholarStation
 			TextView topic = FindViewById<TextView> (Resource.Id.sessionTopic);
 			TextView date = FindViewById<TextView> (Resource.Id.date);
 			TextView time = FindViewById<TextView> (Resource.Id.time);
-
+			/*
 			course.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
 				course = e.Text.ToString();
 			};
@@ -37,9 +37,7 @@ namespace ScholarStation
 			time.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
 				time = e.Text.ToString();
 			};
-
-
-			// Create your application here
+*/
 		}
 	}
 }
