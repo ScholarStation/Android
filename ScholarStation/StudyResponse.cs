@@ -4,7 +4,7 @@ namespace ScholarStation
 {
 	public class StudyResponse
 	{
-		public string owner{ get; set; }
+		public string owner { get; set; }
 		public string KEY{ get; set; }
 		public string id{ get; set; }
 		public string course{ get; set; }

@@ -48,6 +48,9 @@ namespace ScholarStation
 						intent.PutExtras(b);
 
 						StartActivity(intent);
+
+						LoginInfo.username = result.username;
+						LoginInfo.KEY = result.KEY;
 					}else{
 						Android.App.AlertDialog.Builder builder = new AlertDialog.Builder(this);
 						AlertDialog alertDialog = builder.Create();

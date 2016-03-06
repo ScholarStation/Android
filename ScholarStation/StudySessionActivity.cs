@@ -11,6 +11,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Java.Util;
+using Android.Util; //to be deleted
 using System.Threading.Tasks;
 
 namespace ScholarStation
@@ -20,9 +21,9 @@ namespace ScholarStation
 	{
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
-			
-			ArrayList members = new ArrayList();
+			SetContentView (Resource.Layout.StudySessionScreen);
 			base.OnCreate (savedInstanceState);
+			string[] members = new string[4];
 			string studyCourse = "";
 			string studyTopic = "";
 			string studyDate = "";
@@ -32,7 +33,7 @@ namespace ScholarStation
 			string studyMember3 = "";
 			string studyMember4 = "";
 			string studyMember5 = "";
-			SetContentView (Resource.Layout.StudySessionScreen);
+
 			TextView course = FindViewById<TextView> (Resource.Id.courseStudy);
 			TextView topic = FindViewById<TextView> (Resource.Id.SessionTopic);
 			TextView date = FindViewById<TextView> (Resource.Id.date);
@@ -58,28 +59,30 @@ namespace ScholarStation
 			};
 			member1.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
 				studyMember1 = e.Text.ToString();
-				members.Add(studyMember1);
+				members[0] = studyMember1;
 			};
 			member2.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
 				studyMember2 = e.Text.ToString();
-				members.Add(studyMember2);
+				members[1] = studyMember2;
 			};
 			member3.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
 				studyMember3 = e.Text.ToString();
-				members.Add(studyMember3);
+				members[2] = studyMember3;
 			};
 			member4.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
 				studyMember4 = e.Text.ToString();
-				members.Add(studyMember4);
+				members[3] = studyMember4;
 			};
 			member5.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
 				studyMember5 = e.Text.ToString();
-				members.Add(studyMember5);
+				members[4] = studyMember5;
 			};
+			//Console.Write("Is this the end?");
 			create.Click += async (sender, e) => {
+				Console.Write("Hello???");
 				var createStudySession = new StudyUtility();
-				Task<StudyResponse> stuff = createStudySession.StudyAsync(studyCourse, studyTopic, studyDate, studyTime, members);
-
+				Task<StudyResponse> stuff = createStudySession.StudyAsync(LoginInfo.username, LoginInfo.KEY, studyCourse, studyTopic, studyDate, studyTime, members);
+				Console.Write("Testing");
 				StudyResponse result = await stuff;
 			};
 		}
