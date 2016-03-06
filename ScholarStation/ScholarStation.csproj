@@ -63,6 +63,8 @@
     <Compile Include="StudySessionActivity.cs" />
     <Compile Include="StudyUtility.cs" />
     <Compile Include="StudyResponse.cs" />
+    <Compile Include="StudyGroup.cs" />
+    <Compile Include="LoginInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

@@ -12,7 +12,7 @@ namespace ScholarStation
 	{
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
-			//string tag = "FUCK";
+			
 			//Log.Info(tag, "STUFF WILL HAPPEN");
 			base.OnCreate (savedInstanceState);
 			string username = "";
@@ -54,7 +54,7 @@ namespace ScholarStation
 						alertDialog.SetTitle("Login Failed");
 						alertDialog.SetMessage("Login Failed, Please Try Again");
 						alertDialog.Show();
-						//string tag = "FUCK";
+
 						//Log.Info(tag, "STUFF WILL HAPPEN"+ result.ToString());
 					}
 				}
