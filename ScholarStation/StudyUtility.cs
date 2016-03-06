@@ -3,23 +3,26 @@ using Newtonsoft.Json;
 using RestSharp;
 using Android.Util;
 using System.Threading.Tasks;
+using Java.Util;
 
 namespace ScholarStation
 {
 	public class StudyUtility
 	{
-		public Task<StudyResponse> StudyAsync(LoginResponse data, string course, string topic, string date, string time, string[] members){
+		public Task<StudyResponse> StudyAsync(string username, string Key, string course, string topic, string date, string time, ArrayList members){
 			return Task.Run (() => {
 				var client = new RestClient ("http://70.187.52.39:3000/StudyUtility/Create");
 				var req = new RestRequest (Method.POST);
-				LoginResponse dta = data;
+				string userName = username;
+				string k = Key;
 				string c = course;
 				string t = topic;
 				string d = date;
 				string time1 = time;
-				string[] m = members;
+				ArrayList m = members;
 				var studyObject = new StudyRequest {
-					data = dta,
+					user = userName,
+					key = k,
 					course = c,
 					topic = t,
 					date = d,
@@ -37,12 +40,13 @@ namespace ScholarStation
 			}
 			);}
 		private class StudyRequest{
-			public LoginResponse data { get; set; }
+			public string user { get; set; }
+			public string key { get; set; }
 			public string course { get; set; }
 			public string topic { get; set; }
 			public string date { get; set; }
 			public string time { get; set; }
-			public string[] members { get; set; }
+			public ArrayList members { get; set; }
 		}
 	}
 }

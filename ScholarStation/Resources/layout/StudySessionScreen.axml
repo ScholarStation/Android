@@ -2,27 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout2">
     <TextView
         android:text="Class"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1" />
-    <AutoCompleteTextView
+    <EditText
+        android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/studyClass" />
+        android:id="@+id/courseStudy" />
     <TextView
         android:text="Session Topic"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView2" />
-    <AutoCompleteTextView
+    <MultiAutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/sessionTopic" />
+        android:id="@+id/SessionTopic" />
     <TextView
         android:text="Enter Date"
         android:textAppearance="?android:attr/textAppearanceSmall"
@@ -45,12 +47,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/time" />
-    <Button
-        android:text="Invite Members"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/InviteStudyMembers"
-        android:background="#ff43a047" />
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"
@@ -59,11 +55,36 @@
         android:layout_height="206.0dp"
         android:id="@+id/linearLayout1">
         <TextView
-            android:text="Members"
+            android:text="Enter Members Username"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView5" />
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Member1"
+            android:hint="Enter Member Name Here" />
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Member2"
+            android:hint="Enter Member Name Here" />
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Member3"
+            android:hint="Enter Member Name Here" />
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Member4"
+            android:hint="Enter Member Name Here" />
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Member5"
+            android:hint="Enter Member Name Here" />
     </LinearLayout>
     <Button
         android:text="Create Session"

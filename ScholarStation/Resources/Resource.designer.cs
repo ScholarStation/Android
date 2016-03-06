@@ -69,17 +69,32 @@ namespace ScholarStation
 			// aapt resource value: 0x7f060000
 			public const int CreateTutorSession = 2131099648;
 			
-			// aapt resource value: 0x7f06001e
-			public const int InviteStudyMembers = 2131099678;
-			
 			// aapt resource value: 0x7f06000b
 			public const int LoginButton = 2131099659;
+			
+			// aapt resource value: 0x7f06001f
+			public const int Member1 = 2131099679;
+			
+			// aapt resource value: 0x7f060020
+			public const int Member2 = 2131099680;
+			
+			// aapt resource value: 0x7f060021
+			public const int Member3 = 2131099681;
+			
+			// aapt resource value: 0x7f060022
+			public const int Member4 = 2131099682;
+			
+			// aapt resource value: 0x7f060023
+			public const int Member5 = 2131099683;
 			
 			// aapt resource value: 0x7f06000a
 			public const int Password = 2131099658;
 			
 			// aapt resource value: 0x7f060006
 			public const int ProfileButton = 2131099654;
+			
+			// aapt resource value: 0x7f060019
+			public const int SessionTopic = 2131099673;
 			
 			// aapt resource value: 0x7f06000e
 			public const int SignIn = 2131099662;
@@ -108,26 +123,26 @@ namespace ScholarStation
 			// aapt resource value: 0x7f060014
 			public const int StudentYear = 2131099668;
 			
-			// aapt resource value: 0x7f060026
-			public const int TutorAge = 2131099686;
-			
-			// aapt resource value: 0x7f060023
-			public const int TutorEmail = 2131099683;
-			
-			// aapt resource value: 0x7f060021
-			public const int TutorFName = 2131099681;
+			// aapt resource value: 0x7f06002a
+			public const int TutorAge = 2131099690;
 			
 			// aapt resource value: 0x7f060027
-			public const int TutorGender = 2131099687;
-			
-			// aapt resource value: 0x7f060022
-			public const int TutorLName = 2131099682;
-			
-			// aapt resource value: 0x7f060024
-			public const int TutorMajor = 2131099684;
+			public const int TutorEmail = 2131099687;
 			
 			// aapt resource value: 0x7f060025
-			public const int TutorYear = 2131099685;
+			public const int TutorFName = 2131099685;
+			
+			// aapt resource value: 0x7f06002b
+			public const int TutorGender = 2131099691;
+			
+			// aapt resource value: 0x7f060026
+			public const int TutorLName = 2131099686;
+			
+			// aapt resource value: 0x7f060028
+			public const int TutorMajor = 2131099688;
+			
+			// aapt resource value: 0x7f060029
+			public const int TutorYear = 2131099689;
 			
 			// aapt resource value: 0x7f060008
 			public const int UserName = 2131099656;
@@ -135,8 +150,11 @@ namespace ScholarStation
 			// aapt resource value: 0x7f06000c
 			public const int Welcome = 2131099660;
 			
-			// aapt resource value: 0x7f060020
-			public const int createSessionButton = 2131099680;
+			// aapt resource value: 0x7f060018
+			public const int courseStudy = 2131099672;
+			
+			// aapt resource value: 0x7f060024
+			public const int createSessionButton = 2131099684;
 			
 			// aapt resource value: 0x7f06001b
 			public const int date = 2131099675;
@@ -144,8 +162,8 @@ namespace ScholarStation
 			// aapt resource value: 0x7f060017
 			public const int editProfile = 2131099671;
 			
-			// aapt resource value: 0x7f060028
-			public const int editTutorProfile = 2131099688;
+			// aapt resource value: 0x7f06002c
+			public const int editTutorProfile = 2131099692;
 			
 			// aapt resource value: 0x7f06000d
 			public const int imageView1 = 2131099661;
@@ -162,12 +180,6 @@ namespace ScholarStation
 			// aapt resource value: 0x7f060004
 			public const int linearLayout4 = 2131099652;
 			
-			// aapt resource value: 0x7f060019
-			public const int sessionTopic = 2131099673;
-			
-			// aapt resource value: 0x7f060018
-			public const int studyClass = 2131099672;
-			
 			// aapt resource value: 0x7f060007
 			public const int textView1 = 2131099655;
 			
@@ -180,8 +192,8 @@ namespace ScholarStation
 			// aapt resource value: 0x7f06001c
 			public const int textView4 = 2131099676;
 			
-			// aapt resource value: 0x7f06001f
-			public const int textView5 = 2131099679;
+			// aapt resource value: 0x7f06001e
+			public const int textView5 = 2131099678;
 			
 			// aapt resource value: 0x7f06001d
 			public const int time = 2131099677;
