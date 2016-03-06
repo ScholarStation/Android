@@ -79,6 +79,8 @@ namespace ScholarStation
 			create.Click += async (sender, e) => {
 				var createStudySession = new StudyUtility();
 				Task<StudyResponse> stuff = createStudySession.StudyAsync(studyCourse, studyTopic, studyDate, studyTime, members);
+
+				StudyResponse result = await stuff;
 			};
 		}
 	}
