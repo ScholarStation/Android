@@ -8,19 +8,23 @@ namespace ScholarStation
 {
 	public class StudyUtility
 	{
-		public Task<StudyResponse> StudyAsync(string userName, string course, string topic, string date){
+		public Task<StudyResponse> StudyAsync(LoginResponse data, string course, string topic, string date, string time, string[] members){
 			return Task.Run (() => {
 				var client = new RestClient ("http://70.187.52.39:3000/StudyUtility/Create");
 				var req = new RestRequest (Method.POST);
-				string user = userName;
+				LoginResponse dta = data;
 				string c = course;
 				string t = topic;
 				string d = date;
+				string time1 = time;
+				string[] m = members;
 				var studyObject = new StudyRequest {
-					username = user,
+					data = dta,
 					course = c,
 					topic = t,
-					date = d
+					date = d,
+					time = time1,
+					members = m
 				};
 
 				var json = req.JsonSerializer.Serialize (studyObject);
@@ -33,10 +37,12 @@ namespace ScholarStation
 			}
 			);}
 		private class StudyRequest{
-			public string username { get; set; }
+			public LoginResponse data { get; set; }
 			public string course { get; set; }
 			public string topic { get; set; }
 			public string date { get; set; }
+			public string time { get; set; }
+			public string[] members { get; set; }
 		}
 	}
 }

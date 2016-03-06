@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace ScholarStation
 {
-	[Activity (Label = "Student Profile")]			
+	[Activity (Label = "Student Profile", Theme="@android:style/Theme.Holo.Light")]			
 	public class StudentProfile : Activity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)

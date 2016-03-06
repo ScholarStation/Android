@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace ScholarStation
 {
-	[Activity (Label = "Home Screen")]			
+	[Activity (Theme="@android:style/Theme.Holo.Light",Label = "Home Screen")]			
 	public class HomeScreenActivity : Activity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)
