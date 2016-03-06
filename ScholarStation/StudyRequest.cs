@@ -10,12 +10,15 @@ namespace ScholarStation
 	{
 		public Task<StudyResponse> StudyRequestAsync(string userName, string key){
 			return Task.Run (() => {
-				var studyR = new StudyRequest{
-					//userName = LoginInfo.username,
-
-				};
 				var client = new RestClient ("http://70.187.52.39:3000/StudyUtility/GetStudyGroupsByMember");
 				var req = new RestRequest (Method.POST);
+				string user = userName;
+				string k = key;
+				var studyR = new studyInfo{
+					username = user,
+					KEY = k
+				};
+
 				var json = req.JsonSerializer.Serialize (studyR);
 				req.AddParameter ("application/json; charset=utf-8", json, ParameterType.RequestBody);
 				//Console.WriteLine ("HELLLOOOO!>>?????");
@@ -26,6 +29,10 @@ namespace ScholarStation
 				//var dict = JsonConvert.DeserializeObject<JsonArrayAttribute> (asd);
 				return info;
 			});
+		}
+		private class studyInfo{
+			public string username { get; set; }
+			public string KEY { get; set; }
 		}
 	}
 }

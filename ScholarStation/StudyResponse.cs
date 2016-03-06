@@ -4,6 +4,12 @@ namespace ScholarStation
 {
 	public class StudyResponse
 	{
+		/*
+		public StudyResponse(string user, string Key){
+			this.owner = user;
+			this.KEY = Key;
+		}
+		*/
 		public string owner { get; set; }
 		public string KEY{ get; set; }
 		public string id{ get; set; }

@@ -68,6 +68,7 @@
     <Compile Include="DatePickerFrag.cs" />
     <Compile Include="FragToDisplayDate.cs" />
     <Compile Include="StudyRequest.cs" />
+    <Compile Include="ViewStudySessionActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -90,6 +91,7 @@
     <AndroidResource Include="Resources\drawable\ximd90I.jpg" />
     <AndroidResource Include="Resources\drawable\mriknow2.png" />
     <AndroidResource Include="Resources\layout\StudySessionScreen.axml" />
+    <AndroidResource Include="Resources\layout\ViewStudySessionScreen.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
