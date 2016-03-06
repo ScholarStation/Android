@@ -55,6 +55,8 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LoginResponse.cs" />
+    <Compile Include="LoginInfo.cs" />
+    <Compile Include="StudyGroup.cs" />
     <Compile Include="HomeScreenActivity.cs" />
     <Compile Include="ProfileResponse.cs" />
     <Compile Include="StudentProfileActivity.cs" />
