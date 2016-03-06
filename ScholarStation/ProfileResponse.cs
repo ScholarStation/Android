@@ -4,6 +4,7 @@ namespace ScholarStation
 {
 	public class ProfileResponse
 	{
+		//profile info
 		public string fname{get;set;}
 		public string lname{get;set;}
 		public string major{get;set;}
@@ -11,6 +12,11 @@ namespace ScholarStation
 		public string gender{get;set;}
 		public string year{get;set;}
 		public int age{get;set;}
+		//Login info
+		public string KEY { get; set; }
+		public string username{ get; set;}
+		//study groups 
+
 
 		public override string ToString ()
 		{
