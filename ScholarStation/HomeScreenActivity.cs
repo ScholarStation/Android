@@ -62,7 +62,7 @@ namespace ScholarStation
 
 				Intent studySessionIntent = new Intent(this, typeof(ViewStudySessionActivity));
 				var studyBundle = new Bundle();
-				//studyBundle.PutString("owner", info.owner);
+				studyBundle.PutString("owner", info.owner);
 				studyBundle.PutString("course", info.course);
 				studyBundle.PutString("topic", info.topic);
 				studyBundle.PutString("date", info.date);
