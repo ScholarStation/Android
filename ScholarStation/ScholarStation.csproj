@@ -118,6 +118,7 @@
     <AndroidResource Include="Resources\menu\navmenu.xml" />
     <AndroidResource Include="Resources\layout\headerdrawerlayout.xml" />
     <AndroidResource Include="Resources\layout\row.xml" />
+    <AndroidResource Include="Resources\menu\actionbar..xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
