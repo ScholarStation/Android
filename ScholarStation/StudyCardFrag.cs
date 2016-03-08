@@ -12,6 +12,7 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Android.Support.V7.Widget;
+using System.Threading.Tasks;
 
 namespace ScholarStation
 {
@@ -26,7 +27,8 @@ namespace ScholarStation
 		{
 			base.OnCreate (savedInstanceState);
 
-			// Create your fragment here
+
+
 		}
 
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -34,10 +36,25 @@ namespace ScholarStation
 			View view = inflater.Inflate(Resource.Layout.StudyCardLayout, container, false);
 			mRecyclerView = view.FindViewById<RecyclerView> (Resource.Id.recyclerView);
 			mStudyGroup = new List<StudyGroup> ();
-			for (int i = 0; i < mStudyGroup.Count; i++) {
-				mStudyGroup.Add (mStudyGroup [i]); 
+
+			StudyRequest asyncStudyRquest = new StudyRequest ();
+
+			Task<StudyResponse> data = asyncStudyRquest.StudyRequestAsync (LoginInfo.username, LoginInfo.KEY);
+
+			StudyResponse results = data.Result;
+			List<StudyGroup> resultsList = new List<StudyGroup> (results.studyGroups);
+
+			for (int i = 0; i <resultsList.Count; i++) {
+				
+				mStudyGroup.Add (resultsList[i]); 
 			}
-			return base.OnCreateView (inflater, container, savedInstanceState);
+		
+			mLayoutManager = new LinearLayoutManager (view.Context);
+			mRecyclerView.SetLayoutManager (mLayoutManager);
+			mAdapter = new RecyclerAdapter (mStudyGroup);
+			mRecyclerView.SetAdapter (mAdapter);
+
+			return view;
 		}
 	}
 	public class RecyclerAdapter : RecyclerView.Adapter
