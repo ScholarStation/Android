@@ -2260,6 +2260,15 @@ namespace ScholarStation
 			// aapt resource value: 0x7f070086
 			public const int status_bar_latest_event_content = 2131165318;
 			
+			// aapt resource value: 0x7f070092
+			public const int studyCourse = 2131165330;
+			
+			// aapt resource value: 0x7f070091
+			public const int studyOwner = 2131165329;
+			
+			// aapt resource value: 0x7f070093
+			public const int studyTopic = 2131165331;
+			
 			// aapt resource value: 0x7f070065
 			public const int submit_area = 2131165285;
 			
@@ -2310,15 +2319,6 @@ namespace ScholarStation
 			
 			// aapt resource value: 0x7f070047
 			public const int topPanel = 2131165255;
-			
-			// aapt resource value: 0x7f070093
-			public const int txtMessage = 2131165331;
-			
-			// aapt resource value: 0x7f070091
-			public const int txtName = 2131165329;
-			
-			// aapt resource value: 0x7f070092
-			public const int txtSubject = 2131165330;
 			
 			// aapt resource value: 0x7f070094
 			public const int txtTime = 2131165332;

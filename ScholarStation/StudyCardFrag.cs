@@ -47,9 +47,9 @@ namespace ScholarStation
 		public class MyView : RecyclerView.ViewHolder
 		{
 			public View mMainView { get; set; }
-			public TextView mName { get; set; }
-			public TextView mSubject { get; set; }
-			public TextView mMessage { get; set; }
+			public TextView mOwner { get; set; }
+			public TextView mCourse { get; set; }
+			public TextView mTopic { get; set; }
 
 			public MyView (View view) : base(view)
 			{
@@ -61,11 +61,10 @@ namespace ScholarStation
 		{
 			View row = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.row, parent, false);
 
-//			TextView txtName = row.FindViewById<TextView>(Resource.Id.txtName);
-//			TextView txtSubject = row.FindViewById<TextView>(Resource.Id.txtSubject);
-//			TextView txtMessage = row.FindViewById<TextView>(Resource.Id.txtMessage);
-//
-//			MyView view = new MyView(row) { mName = txtName, mSubject = txtSubject, mMessage = txtMessage };
+			TextView studyOwner = row.FindViewById<TextView>(Resource.Id.studyOwner);
+			TextView studyCourse = row.FindViewById<TextView>(Resource.Id.studyCourse);
+			TextView studyTopic = row.FindViewById<TextView>(Resource.Id.studyTopic);
+			MyView view = new MyView(row) { mOwner = studyOwner, mCourse = studyCourse, mTopic = studyTopic };
 			return view;
 		}
 
