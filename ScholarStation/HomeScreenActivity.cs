@@ -144,12 +144,10 @@ namespace ScholarStation
 //				studyBundle.PutString("members", info.members[3]);
 //				studyBundle.PutString("members", info.members[4]);
 //				studySessionIntent.PutExtras(studyBundle);
-				Console.Write(info);
+				//Console.Write(info);
 				StartActivity(studySessionIntent);
-			};
+			}
 			// Create your application here
 
 		}
-	}
 }
-
