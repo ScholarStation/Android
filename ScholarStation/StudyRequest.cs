@@ -18,11 +18,12 @@ namespace ScholarStation
 					username = user,
 					KEY = k
 				};
-
+			
 				var json = req.JsonSerializer.Serialize (studyR);
 				req.AddParameter ("application/json; charset=utf-8", json, ParameterType.RequestBody);
 				//Console.WriteLine ("HELLLOOOO!>>?????");
 				var returnStuff = client.Execute (req);
+				Console.Write(returnStuff.Content);
 				StudyResponse info = JsonConvert.DeserializeObject<StudyResponse> (returnStuff.Content);
 				Console.WriteLine (info);
 

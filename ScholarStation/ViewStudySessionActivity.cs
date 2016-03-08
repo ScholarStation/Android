@@ -32,8 +32,8 @@ namespace ScholarStation
 			TextView vMember4 = FindViewById<TextView> (Resource.Id.vMember4);
 			TextView vMember5 = FindViewById<TextView> (Resource.Id.vMember5);
 
-			var vC = Intent.GetStringExtra ("course");
-			vCourse.Text = vC;
+//			var vC = Intent.GetStringExtra ("course");
+//			vCourse.Text = vC;
 		}
 	}
 }

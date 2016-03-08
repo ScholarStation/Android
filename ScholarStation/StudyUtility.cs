@@ -21,9 +21,10 @@ namespace ScholarStation
 				string d = date;
 				string time1 = time;
 				string[] m = members;
-				var studyObject = new StudyRequest {
+				var studyObject = new StudyGroupCreate {
 					username = userName,
 					KEY = k,
+					owner = userName,
 					course = c,
 					topic = t,
 					date = d,
