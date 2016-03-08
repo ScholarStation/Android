@@ -61,7 +61,7 @@ namespace ScholarStation
 				ft.Commit ();
 				break;
 			case Resource.Id.nav_study:
-				ft.Replace (Resource.Id.FragmentLayout, new studySessionFragment ());
+				ft.Replace (Resource.Id.FragmentLayout, new StudyCardFrag ());
 				ft.AddToBackStack (null);
 				ft.Commit ();
 				break;

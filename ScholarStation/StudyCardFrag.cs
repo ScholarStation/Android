@@ -20,6 +20,7 @@ namespace ScholarStation
 		private RecyclerView mRecyclerView;
 		private RecyclerView.LayoutManager mLayoutManager;
 		private RecyclerView.Adapter mAdapter;
+		private List<StudyGroup> mStudyGroup;
 
 		public override void OnCreate (Bundle savedInstanceState)
 		{
@@ -31,18 +32,22 @@ namespace ScholarStation
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Resource.Layout.StudyCardLayout, container, false);
-
+			mRecyclerView = view.FindViewById<RecyclerView> (Resource.Id.recyclerView);
+			mStudyGroup = new List<StudyGroup> ();
+			for (int i = 0; i < mStudyGroup.Count; i++) {
+				mStudyGroup.Add (mStudyGroup [i]); 
+			}
 			return base.OnCreateView (inflater, container, savedInstanceState);
 		}
 	}
 	public class RecyclerAdapter : RecyclerView.Adapter
 	{
-//		private List<Email> mEmails;
-//
-//		public RecyclerAdapter(List<Email> emails)
-//		{
-//			mEmails = emails;
-//		}
+		private List<StudyGroup> mStudyGroup;
+
+		public RecyclerAdapter(List<StudyGroup> studyGroup)
+		{
+			mStudyGroup = studyGroup;
+		}
 
 		public class MyView : RecyclerView.ViewHolder
 		{
@@ -71,15 +76,15 @@ namespace ScholarStation
 		public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
 		{
 			MyView myHolder = holder as MyView;
-//			myHolder.mName.Text = mEmails[position].Name;
-//			myHolder.mSubject.Text = mEmails[position].Subject;
-//			myHolder.mMessage.Text = mEmails[position].Message;
+			myHolder.mOwner.Text = mStudyGroup[position].owner;
+			myHolder.mCourse.Text = mStudyGroup[position].course;
+			myHolder.mTopic.Text = mStudyGroup[position].topic;
 		}
 
-//		public override int ItemCount
-//		{
-////			get { return mEmails.Count; }
-//		}
+		public override int ItemCount
+		{
+			get { return mStudyGroup.Count; }
+		}
 	}
 
 }
