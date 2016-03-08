@@ -18,7 +18,7 @@ namespace ScholarStation
 	{
 		private readonly Context _context;
 		private int _hour;
-		private bool _min;
+		private int _min;
 		private bool _is24hour;
 		private readonly Android.App.TimePickerDialog.IOnTimeSetListener _listener;
 

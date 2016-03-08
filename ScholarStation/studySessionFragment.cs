@@ -121,7 +121,45 @@ namespace ScholarStation
 				hour = hour + 12;
 			else if (hour > 12)
 				hour = hour - 12;
-			string test = string.Format ("{0}:{1}", hour, minute);
+			//corrects minutes to the correct format 0-> 00 etc.
+			string formattedMinutes;
+			switch (minute) {
+			case 0:
+				formattedMinutes = "00";
+				break;
+			case 1:
+				formattedMinutes = "01";
+				break;
+			case 2:
+				formattedMinutes = "02";
+				break;
+			case 3: 
+				formattedMinutes = "03";
+				break;
+			case 4:
+				formattedMinutes = "04";
+				break;
+			case 5:
+				formattedMinutes = "05";
+				break;
+			case 6:
+				formattedMinutes = "06";
+				break;
+			case 7:
+				formattedMinutes = "07";
+				break;
+			case 8:
+				formattedMinutes = "08";
+				break;
+			case 9: 
+				formattedMinutes = "09";
+				break;				
+			default:
+				formattedMinutes = minute.ToString ();
+				break;
+			}
+
+			string test = string.Format ("{0}:{1}", hour, formattedMinutes);
 			View.FindViewById<EditText> (Resource.Id.time).Text = test;
 		}
 	}
