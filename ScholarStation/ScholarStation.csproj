@@ -80,13 +80,10 @@
     <Compile Include="DatePickerFrag.cs" />
     <Compile Include="StudyRequest.cs" />
     <Compile Include="ViewStudySessionActivity.cs" />
-<<<<<<< HEAD
     <Compile Include="homeScreenFragment.cs" />
     <Compile Include="studentProfileFragment.cs" />
     <Compile Include="studySessionFragment.cs" />
-=======
     <Compile Include="StudyGroupCreate.cs" />
->>>>>>> refs/remotes/origin/StudySession_Branch
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

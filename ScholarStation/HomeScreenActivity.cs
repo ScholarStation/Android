@@ -122,7 +122,7 @@ namespace ScholarStation
 			drawerLayout.CloseDrawers ();
 		}
 
-<<<<<<< HEAD
+
 		public override void OnBackPressed ()
 		{
 			if(FragmentManager.BackStackEntryCount!= 0) {
@@ -130,7 +130,7 @@ namespace ScholarStation
 			} else {
 				base.OnBackPressed ();
 			}  
-=======
+
 				Intent studySessionIntent = new Intent(this, typeof(ViewStudySessionActivity));
 				var studyBundle = new Bundle();
 //				studyBundle.PutString("owner", info.owner);
@@ -148,7 +148,7 @@ namespace ScholarStation
 				StartActivity(studySessionIntent);
 			};
 			// Create your application here
->>>>>>> refs/remotes/origin/StudySession_Branch
+
 		}
 	}
 }
