@@ -11,11 +11,16 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using Android.Support.V7.Widget;
 
 namespace ScholarStation
 {
 	public class StudyCardFrag : Fragment
 	{
+		private RecyclerView mRecyclerView;
+		private RecyclerView.LayoutManager mLayoutManager;
+		private RecyclerView.Adapter mAdapter;
+
 		public override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
