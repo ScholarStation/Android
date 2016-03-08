@@ -69,6 +69,7 @@
     <Compile Include="FragToDisplayDate.cs" />
     <Compile Include="StudyRequest.cs" />
     <Compile Include="ViewStudySessionActivity.cs" />
+    <Compile Include="StudyGroupCreate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
