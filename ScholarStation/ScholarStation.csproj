@@ -82,6 +82,7 @@
     <Compile Include="studentProfileFragment.cs" />
     <Compile Include="studySessionFragment.cs" />
     <Compile Include="StudyGroupCreate.cs" />
+    <Compile Include="StudyCardFrag.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -114,6 +115,8 @@
     <AndroidResource Include="Resources\layout\mainDrawer.axml" />
     <AndroidResource Include="Resources\menu\navmenu.xml" />
     <AndroidResource Include="Resources\layout\headerdrawerlayout.xml" />
+    <AndroidResource Include="Resources\layout\StudyCardLayout.axml" />
+    <AndroidResource Include="Resources\layout\row.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
