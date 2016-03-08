@@ -82,6 +82,7 @@
     <Compile Include="studentProfileFragment.cs" />
     <Compile Include="studySessionFragment.cs" />
     <Compile Include="StudyGroupCreate.cs" />
+    <Compile Include="timePicker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

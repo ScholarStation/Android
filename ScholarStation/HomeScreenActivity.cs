@@ -41,10 +41,8 @@ namespace ScholarStation
 			drawerLayout.SetDrawerListener (drawerToggle);
 			drawerToggle.SyncState ();
 
-
 			var user= Intent.GetStringExtra("user");
 			var key = Intent.GetStringExtra("key");
-
 		}
 
 		void NavigationView_NavigationItemSelected (object sender, NavigationView.NavigationItemSelectedEventArgs e)
@@ -79,8 +77,6 @@ namespace ScholarStation
 			} else {
 				base.OnBackPressed ();
 			}  
-				
 		}
-
 	}
 }

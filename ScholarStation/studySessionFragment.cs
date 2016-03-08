@@ -15,7 +15,7 @@ using Android.Widget;
 
 namespace ScholarStation
 {
-	public class studySessionFragment : Fragment,Android.App.DatePickerDialog.IOnDateSetListener
+	public class studySessionFragment : Fragment,Android.App.DatePickerDialog.IOnDateSetListener,Android.App.TimePickerDialog.IOnTimeSetListener
 	{
 		public override void OnCreate (Bundle savedInstanceState)
 		{
@@ -28,6 +28,11 @@ namespace ScholarStation
 			view.FindViewById<EditText>(Resource.Id.date).Click += (object sender, EventArgs e) => 
 			{
 				var dialog = new DatePickerFrag(Activity,DateTime.Now,this);
+				dialog.Show(FragmentManager,null);
+			};
+			view.FindViewById<EditText>(Resource.Id.time).Click += (object sender, EventArgs e) => 
+			{
+				var dialog = new timePicker(Activity,this,DateTime.Now.Hour,DateTime.Now.Minute,false);
 				dialog.Show(FragmentManager,null);
 			};
 
@@ -97,11 +102,7 @@ namespace ScholarStation
 				ft.Commit ();
 				Toast.MakeText (Activity,"Study Group Created", ToastLength.Short).Show ();
 			};
-			//			view.FindViewById<EditText>(Resource.Id.time).Click += (object sender, EventArgs e) => 
-			//			{
-			//				var dialog = new timePicker(Activity,this,DateTime.Now.Hour,DateTime.Now.Minute,false);
-			//				dialog.Show(FragmentManager,null);
-			//			};
+						
 
 			return view;
 		}
@@ -112,6 +113,16 @@ namespace ScholarStation
 			var date = new DateTime (year, month + 1, day);
 			View.FindViewById<EditText> (Resource.Id.date).Text = date.ToString ("yyyy MMMMM dd");
 
+		}
+
+		public void OnTimeSet(TimePicker view, int hour, int minute)
+		{
+			if (hour == 0)
+				hour = hour + 12;
+			else if (hour > 12)
+				hour = hour - 12;
+			string test = string.Format ("{0}:{1}", hour, minute);
+			View.FindViewById<EditText> (Resource.Id.time).Text = test;
 		}
 	}
 }
