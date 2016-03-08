@@ -37,7 +37,7 @@ namespace ScholarStation
 			};
 
 			Button CreateButton = view.FindViewById<Button>(Resource.Id.createSessionButton);
-			string[] members = new string[4];
+			string[] members = new string[5];
 			string studyCourse = "";
 			string studyTopic = "";
 			string studyDate = "";
@@ -96,17 +96,21 @@ namespace ScholarStation
 
 				Task<StudyResponse> stuff = createStudySession.StudyAsync(LoginInfo.username, LoginInfo.KEY, studyCourse, studyTopic, studyDate, studyTime, members);
 				StudyResponse result = await stuff;
+				var ft = FragmentManager.BeginTransaction ();
+				ft.Replace (Resource.Id.FragmentLayout, new homeScreenFragment ());
+				ft.AddToBackStack (null);
+				ft.Commit ();
+				Toast.MakeText (Activity,"Study Group Created", ToastLength.Short).Show ();
 			};
 			//			view.FindViewById<EditText>(Resource.Id.time).Click += (object sender, EventArgs e) => 
 			//			{
 			//				var dialog = new timePicker(Activity,this,DateTime.Now.Hour,DateTime.Now.Minute,false);
 			//				dialog.Show(FragmentManager,null);
 			//			};
+
 			return view;
 		}
-
-
-
+			
 
 		public void OnDateSet(DatePicker view, int year, int month, int day)
 		{
