@@ -25,7 +25,7 @@ namespace ScholarStation
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
-			SetContentView (Resource.Layout.HomeScreen);
+			SetContentView (Resource.Layout.mainDrawer);
 			drawerLayout = FindViewById<DrawerLayout> (Resource.Id.drawer_layout);
 
 			var toolbar = FindViewById<Toolbar> (Resource.Id.appBar);

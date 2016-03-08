@@ -34,7 +34,12 @@ namespace ScholarStation
 
 			LoginResponse data = new LoginResponse (user, key);
 			var Pgetter = new ProfileUtility();
-			ProfileResponse result = Pgetter.ProfileAsync(data);
+
+				Task<ProfileResponse> result = Pgetter.ProfileAsync(data);
+
+			var finishedResult = result.Result;
+			
+
 
 			TextView firstName = view.FindViewById<TextView> (Resource.Id.StudentFName);
 			TextView lastName = view.FindViewById<TextView> (Resource.Id.StudentLName);
@@ -44,13 +49,13 @@ namespace ScholarStation
 			TextView age = view.FindViewById<TextView> (Resource.Id.StudentAge);
 			TextView year = view.FindViewById<TextView> (Resource.Id.StudentYear);
 
-			var fName= result.fname;
-			var lName = result.lname;
-			var Smajor = result.major;
-			var Semail = result.email;
-			var Sgender = result.gender;
-			var Syear = result.year;
-			var Sage = result.age.ToString();
+			var fName= finishedResult.fname;
+			var lName = finishedResult.lname;
+			var Smajor = finishedResult.major;
+			var Semail = finishedResult.email;
+			var Sgender = finishedResult.gender;
+			var Syear = finishedResult.year;
+			var Sage = finishedResult.age.ToString();
 
 			firstName.Text = fName;
 			lastName.Text = lName;
