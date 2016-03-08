@@ -2,4 +2,7 @@
 <resources>
 	<string name="hello">Submit</string>
 	<string name="app_name">ScholarStation</string>
+	<string name="strBottomLine">User can go here</string>
+	<string name="open_drawer">Open drawer</string>
+	<string name="close_drawer">Close drawer</string>
 </resources>

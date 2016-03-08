@@ -48,6 +48,18 @@
     <Reference Include="RestSharp">
       <HintPath>..\packages\RestSharp.105.2.3\lib\MonoAndroid10\RestSharp.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design">
+      <HintPath>..\packages\Xamarin.Android.Support.Design.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.Design.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -66,9 +78,11 @@
     <Compile Include="StudyUtility.cs" />
     <Compile Include="StudyResponse.cs" />
     <Compile Include="DatePickerFrag.cs" />
-    <Compile Include="FragToDisplayDate.cs" />
     <Compile Include="StudyRequest.cs" />
     <Compile Include="ViewStudySessionActivity.cs" />
+    <Compile Include="homeScreenFragment.cs" />
+    <Compile Include="studentProfileFragment.cs" />
+    <Compile Include="studySessionFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -92,9 +106,19 @@
     <AndroidResource Include="Resources\drawable\mriknow2.png" />
     <AndroidResource Include="Resources\layout\StudySessionScreen.axml" />
     <AndroidResource Include="Resources\layout\ViewStudySessionScreen.axml" />
+    <AndroidResource Include="Resources\drawable\ic_account_circle_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_devices_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_group_work_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_home_black_24dp.png" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\layout\appBar.axml" />
+    <AndroidResource Include="Resources\layout\mainDrawer.axml" />
+    <AndroidResource Include="Resources\menu\navmenu.xml" />
+    <AndroidResource Include="Resources\layout\headerdrawerlayout.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\menu\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#B6B6B6">
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"
@@ -15,47 +16,57 @@
             android:layout_height="wrap_content"
             android:id="@+id/StudentFName"
             android:text="First Name"
+            android:textColor="@android:color/white"
             android:editable="false" />
         <AutoCompleteTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/StudentLName"
             android:text="Last Name"
+            android:textColor="@android:color/white"
             android:editable="false" />
         <AutoCompleteTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/StudentEmail"
             android:text="Email"
+            android:textColor="@android:color/white"
             android:editable="false" />
         <AutoCompleteTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/StudentMajor"
             android:text="Major"
+            android:textColor="@android:color/white"
             android:editable="false" />
         <AutoCompleteTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/StudentYear"
             android:text="Year"
+            android:textColor="@android:color/white"
             android:editable="false" />
         <AutoCompleteTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/StudentAge"
             android:text="Age"
+            android:textColor="@android:color/white"
             android:editable="false" />
         <AutoCompleteTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/StudentGender"
             android:text="Gender"
+            android:textColor="@android:color/white"
             android:editable="false" />
     </LinearLayout>
     <Button
         android:text="Edit Profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/white"
+        android:background="#ff43a047"
         android:id="@+id/editProfile" />
 </LinearLayout>

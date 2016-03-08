@@ -14,7 +14,7 @@ using Android.Widget;
 
 namespace ScholarStation
 {
-	public class FragToDisplayDate : Fragment
+	public class homeScreenFragment : Fragment
 	{
 		public override void OnCreate (Bundle savedInstanceState)
 		{
@@ -27,8 +27,8 @@ namespace ScholarStation
 		{
 			// Use this to return your custom view for this Fragment
 			// return inflater.Inflate(Resource.Layout.YourFragment, container, false);
-
-			return base.OnCreateView (inflater, container, savedInstanceState);
+			View view = inflater.Inflate(Resource.Layout.HomeScreen, container, false);
+			return view;
 		}
 	}
 }
