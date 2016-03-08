@@ -117,6 +117,7 @@ namespace ScholarStation
 
 		public void OnTimeSet(TimePicker view, int hour, int minute)
 		{
+			// formats hours to 12hr time
 			if (hour == 0)
 				hour = hour + 12;
 			else if (hour > 12)
@@ -159,8 +160,8 @@ namespace ScholarStation
 				break;
 			}
 
-			string test = string.Format ("{0}:{1}", hour, formattedMinutes);
-			View.FindViewById<EditText> (Resource.Id.time).Text = test;
+			string  timeString= string.Format ("{0}:{1}", hour, formattedMinutes);
+			View.FindViewById<EditText> (Resource.Id.time).Text = timeString;
 		}
 	}
 }

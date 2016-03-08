@@ -74,6 +74,7 @@
     <Compile Include="LoginUtility.cs" />
     <Compile Include="ProfileUtility.cs" />
     <Compile Include="StudyUtility.cs" />
+	<Compile Include="StudyCardFrag.cs" />
     <Compile Include="StudyResponse.cs" />
     <Compile Include="DatePickerFrag.cs" />
     <Compile Include="StudyRequest.cs" />
@@ -92,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
+	<AndroidResource Include="Resources\layout\StudyCardLayout.axml" />
     <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
