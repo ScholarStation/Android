@@ -69,12 +69,10 @@
     <Compile Include="StudyGroup.cs" />
     <Compile Include="HomeScreenActivity.cs" />
     <Compile Include="ProfileResponse.cs" />
-    <Compile Include="StudentProfileActivity.cs" />
     <Compile Include="StartScreenActivity.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="LoginUtility.cs" />
     <Compile Include="ProfileUtility.cs" />
-    <Compile Include="StudySessionActivity.cs" />
     <Compile Include="StudyUtility.cs" />
     <Compile Include="StudyResponse.cs" />
     <Compile Include="DatePickerFrag.cs" />

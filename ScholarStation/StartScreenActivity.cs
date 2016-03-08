@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace ScholarStation
 {
-	[Activity (Label = "Scholar Station", MainLauncher = true, Icon = "@mipmap/icon", Theme="@android:style/Theme.Holo.Light")]		
+	[Activity (Label = "Scholar Station", MainLauncher = true, Icon = "@mipmap/icon")]		
 	public class StartScreenActivity : Activity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)
