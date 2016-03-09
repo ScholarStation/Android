@@ -9,10 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical" />
-    <ListView
-        android:id="@+id/lvToDoList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="56dp"
@@ -20,6 +16,5 @@
         android:layout_gravity="bottom|right"
         android:layout_margin="16dp"
         android:src="@drawable/web_hi_res_512"
-        app:layout_anchor="@id/lvToDoList"
         app:layout_anchorGravity="bottom|right|end" />
 </android.support.design.widget.CoordinatorLayout>
