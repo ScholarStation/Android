@@ -32,6 +32,8 @@ namespace ScholarStation
 
 		}
 
+	
+
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Resource.Layout.StudyCardLayout, container, false);
@@ -50,19 +52,23 @@ namespace ScholarStation
 			
 			mLayoutManager = new LinearLayoutManager (view.Context);
 			mRecyclerView.SetLayoutManager (mLayoutManager);
-			mAdapter = new RecyclerAdapter (mStudyGroup);
+			mAdapter = new RecyclerAdapter (mStudyGroup,mRecyclerView);
 			mRecyclerView.SetAdapter (mAdapter);
 
 			return view;
 		}
+
 	}
 	public class RecyclerAdapter : RecyclerView.Adapter
 	{
 		private List<StudyGroup> mStudyGroup;
+		private RecyclerView mRecyclerView;
 
-		public RecyclerAdapter(List<StudyGroup> studyGroup)
+
+		public RecyclerAdapter(List<StudyGroup> studyGroup,RecyclerView rv)
 		{
 			mStudyGroup = studyGroup;
+			mRecyclerView = rv;
 		}
 
 		public class MyView : RecyclerView.ViewHolder
@@ -92,10 +98,19 @@ namespace ScholarStation
 		public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
 		{
 			MyView myHolder = holder as MyView;
+			myHolder.mMainView.Click += mMainView_Click;
 			myHolder.mOwner.Text = mStudyGroup[position].owner;
 			myHolder.mCourse.Text = mStudyGroup[position].course;
 			myHolder.mTopic.Text = mStudyGroup[position].topic;
 		}
+
+		void mMainView_Click(object sender, EventArgs e)
+		{
+			int position =mRecyclerView.GetChildPosition((View)sender);
+			int indexPosition = (mStudyGroup.Count - 1) - position;
+			Console.WriteLine("CLicked Study Group:"+mStudyGroup[indexPosition]._id+"Opening edit menu");
+		}
+
 
 		public override int ItemCount
 		{

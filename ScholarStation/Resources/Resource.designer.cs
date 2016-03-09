@@ -1912,6 +1912,9 @@ namespace ScholarStation
 			// aapt resource value: 0x7f07003d
 			public const int activity_chooser_view_content = 2131165245;
 			
+			// aapt resource value: 0x7f0700c3
+			public const int add = 2131165379;
+			
 			// aapt resource value: 0x7f070049
 			public const int alertTitle = 2131165257;
 			
@@ -2001,6 +2004,9 @@ namespace ScholarStation
 			
 			// aapt resource value: 0x7f07000e
 			public const int disableHome = 2131165198;
+			
+			// aapt resource value: 0x7f0700c4
+			public const int discard = 2131165380;
 			
 			// aapt resource value: 0x7f070080
 			public const int drawer_layout = 2131165312;
@@ -2119,17 +2125,17 @@ namespace ScholarStation
 			// aapt resource value: 0x7f070015
 			public const int multiply = 2131165205;
 			
-			// aapt resource value: 0x7f0700c3
-			public const int nav_home = 2131165379;
-			
-			// aapt resource value: 0x7f0700c4
-			public const int nav_profile = 2131165380;
-			
 			// aapt resource value: 0x7f0700c5
-			public const int nav_study = 2131165381;
+			public const int nav_home = 2131165381;
 			
 			// aapt resource value: 0x7f0700c6
-			public const int nav_tutor = 2131165382;
+			public const int nav_profile = 2131165382;
+			
+			// aapt resource value: 0x7f0700c7
+			public const int nav_study = 2131165383;
+			
+			// aapt resource value: 0x7f0700c8
+			public const int nav_tutor = 2131165384;
 			
 			// aapt resource value: 0x7f070083
 			public const int nav_view = 2131165315;
@@ -2606,7 +2612,10 @@ namespace ScholarStation
 		{
 			
 			// aapt resource value: 0x7f0d0000
-			public const int navmenu = 2131558400;
+			public const int actionbar = 2131558400;
+			
+			// aapt resource value: 0x7f0d0001
+			public const int navmenu = 2131558401;
 			
 			static Menu()
 			{

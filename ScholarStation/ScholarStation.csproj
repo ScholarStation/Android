@@ -118,7 +118,11 @@
     <AndroidResource Include="Resources\menu\navmenu.xml" />
     <AndroidResource Include="Resources\layout\headerdrawerlayout.xml" />
     <AndroidResource Include="Resources\layout\row.xml" />
+<<<<<<< HEAD
     <AndroidResource Include="Resources\drawable\fab_button.png" />
+=======
+    <AndroidResource Include="Resources\menu\actionbar..xml" />
+>>>>>>> origin/Shallow_GUI_Branch
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
