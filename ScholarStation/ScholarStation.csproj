@@ -84,6 +84,8 @@
     <Compile Include="studySessionFragment.cs" />
     <Compile Include="StudyGroupCreate.cs" />
     <Compile Include="timePicker.cs" />
+    <Compile Include="DeleteUtility.cs" />
+    <Compile Include="DeleteResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
