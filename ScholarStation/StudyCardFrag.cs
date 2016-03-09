@@ -21,7 +21,7 @@ namespace ScholarStation
 	{
 		private RecyclerView mRecyclerView;
 		private FloatingActionButton mFab;
-		private ListView mListView;
+		//private ListView mListView;
 		private RecyclerView.LayoutManager mLayoutManager;
 		private RecyclerView.Adapter mAdapter;
 		private List<StudyGroup> mStudyGroup;
@@ -40,8 +40,11 @@ namespace ScholarStation
 		{
 			View view = inflater.Inflate(Resource.Layout.StudyCardLayout, container, false);
 			mRecyclerView = view.FindViewById<RecyclerView> (Resource.Id.recyclerView);
-			mListView = view.FindViewById<ListView> (Resource.Id.lvToDoList);
+			//mListView = view.FindViewById<ListView> (Resource.Id.lvToDoList);
 			mFab = view.FindViewById<FloatingActionButton> (Resource.Id.fab);
+			mFab.Click += (sender, e) => {
+				Toast.MakeText(Activity, "YOU CLICKED IT", ToastLength.Short).Show();
+			};
 			mStudyGroup = new List<StudyGroup> ();
 			StudyRequest asyncStudyRquest = new StudyRequest ();
 			Task<StudyResponse> data = asyncStudyRquest.StudyRequestAsync (LoginInfo.username, LoginInfo.KEY);
