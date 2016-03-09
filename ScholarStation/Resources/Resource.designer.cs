@@ -1735,25 +1735,28 @@ namespace ScholarStation
 			public const int design_snackbar_background = 2130837573;
 			
 			// aapt resource value: 0x7f020046
-			public const int ic_account_circle_black_24dp = 2130837574;
+			public const int fab_button = 2130837574;
 			
 			// aapt resource value: 0x7f020047
-			public const int ic_devices_black_24dp = 2130837575;
+			public const int ic_account_circle_black_24dp = 2130837575;
 			
 			// aapt resource value: 0x7f020048
-			public const int ic_group_work_black_24dp = 2130837576;
+			public const int ic_devices_black_24dp = 2130837576;
 			
 			// aapt resource value: 0x7f020049
-			public const int ic_home_black_24dp = 2130837577;
+			public const int ic_group_work_black_24dp = 2130837577;
 			
 			// aapt resource value: 0x7f02004a
-			public const int mriknow2 = 2130837578;
-			
-			// aapt resource value: 0x7f02004c
-			public const int notification_template_icon_bg = 2130837580;
+			public const int ic_home_black_24dp = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int ximd90I = 2130837579;
+			public const int mriknow2 = 2130837579;
+			
+			// aapt resource value: 0x7f02004d
+			public const int notification_template_icon_bg = 2130837581;
+			
+			// aapt resource value: 0x7f02004c
+			public const int ximd90I = 2130837580;
 			
 			static Drawable()
 			{

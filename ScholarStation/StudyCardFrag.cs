@@ -13,6 +13,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Support.V7.Widget;
 using System.Threading.Tasks;
+using Android.Support.Design.Widget;
 
 namespace ScholarStation
 {
@@ -36,9 +37,7 @@ namespace ScholarStation
 			View view = inflater.Inflate(Resource.Layout.StudyCardLayout, container, false);
 			mRecyclerView = view.FindViewById<RecyclerView> (Resource.Id.recyclerView);
 			mStudyGroup = new List<StudyGroup> ();
-
 			StudyRequest asyncStudyRquest = new StudyRequest ();
-
 			Task<StudyResponse> data = asyncStudyRquest.StudyRequestAsync (LoginInfo.username, LoginInfo.KEY);
 
 			StudyResponse results = data.Result;
@@ -48,7 +47,7 @@ namespace ScholarStation
 				
 				mStudyGroup.Add (resultsList[i]); 
 			}
-		
+			
 			mLayoutManager = new LinearLayoutManager (view.Context);
 			mRecyclerView.SetLayoutManager (mLayoutManager);
 			mAdapter = new RecyclerAdapter (mStudyGroup);

@@ -118,6 +118,7 @@
     <AndroidResource Include="Resources\menu\navmenu.xml" />
     <AndroidResource Include="Resources\layout\headerdrawerlayout.xml" />
     <AndroidResource Include="Resources\layout\row.xml" />
+    <AndroidResource Include="Resources\drawable\fab_button.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
