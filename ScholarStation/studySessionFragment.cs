@@ -20,15 +20,6 @@ namespace ScholarStation
 
 
 		string[] members = new string[5];
-		string studyCourse;
-		string studyTopic ;
-		string studyDate ;
-		string studyTime ;
-		string studyMember1 ;
-		string studyMember2 ;
-		string studyMember3 ;
-		string studyMember4 ;
-		string studyMember5 ;
 
 		StudyGroup sg;
 		bool create;
@@ -84,10 +75,10 @@ namespace ScholarStation
 			 member4 = view.FindViewById<TextView> (Resource.Id.Member4);
 			 member5 = view.FindViewById<TextView> (Resource.Id.Member5);
 			if (!create) {
-				course.Text = sg.topic;
+				course.Text = sg.course;
 				date.Text = sg.date;
 				time.Text = sg.time;
-				topic.Text = sg.course;
+				topic.Text = sg.topic;
 				member1.Text = sg.members [0];
 				member2.Text = sg.members [1];
 				member3.Text = sg.members [2];
@@ -100,42 +91,42 @@ namespace ScholarStation
 			}
 
 			course.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
-				studyCourse = e.Text.ToString();
+				sg.course = e.Text.ToString();
 			};
 			topic.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
-				studyTopic = e.Text.ToString();
+				sg.topic = e.Text.ToString();
 			};
 			date.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
-				studyDate = e.Text.ToString();
+				sg.date = e.Text.ToString();
 			};
 			time.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
-				studyTime = e.Text.ToString();
+				sg.time = e.Text.ToString();
 			};
 			member1.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
-				studyMember1 = e.Text.ToString();
-				members[0] = studyMember1;
+				sg.members[0] = e.Text.ToString();
+		
 			};
 			member2.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
-				studyMember2 = e.Text.ToString();
-				members[1] = studyMember2;
+				sg.members[1] = e.Text.ToString();
+
 			};
 			member3.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
-				studyMember3 = e.Text.ToString();
-				members[2] = studyMember3;
+				sg.members[2] = e.Text.ToString();
+
 			};
 			member4.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
-				studyMember4 = e.Text.ToString();
-				members[3] = studyMember4;
+				sg.members[3] = e.Text.ToString();
+
 			};
 			member5.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
-				studyMember5 = e.Text.ToString();
-				members[4] = studyMember5;
+				sg.members[4] = e.Text.ToString();
+	
 			};
 			CreateButton.Click += async (sender, e) => {
 
 				StudyUtility createStudySession = new StudyUtility();
 
-				Task<StudyResponse> stuff = createStudySession.StudyAsync(LoginInfo.username, LoginInfo.KEY, studyCourse, studyTopic, studyDate, studyTime, members);
+				Task<StudyResponse> stuff = createStudySession.StudyAsync(LoginInfo.username, LoginInfo.KEY, sg.course, sg.topic, sg.date, sg.time, sg.members);
 				StudyResponse result = await stuff;
 				var ft = FragmentManager.BeginTransaction ();
 				ft.Replace (Resource.Id.FragmentLayout, new StudyCardFrag ());
@@ -154,6 +145,17 @@ namespace ScholarStation
 				ft.Commit ();
 				Toast.MakeText (Activity,"Study Group Deleted", ToastLength.Short).Show ();
 			};
+
+			EditButton.Click += async (sender, e) => {
+				EditStudyUtility editStudySession = new EditStudyUtility();
+				Task<StudyResponse> eResponse = editStudySession.EditStudyAsync(LoginInfo.username, LoginInfo.KEY,sg._id, sg.course, sg.topic, sg.date, sg.time, sg.members);
+				StudyResponse result = await eResponse;
+				var ft = FragmentManager.BeginTransaction ();
+				ft.Replace (Resource.Id.FragmentLayout, new StudyCardFrag ());
+				ft.AddToBackStack (null);
+				ft.Commit ();
+				Toast.MakeText (Activity,"Study Group Edited", ToastLength.Short).Show ();
+			};
 			return view;
 		}
 			
@@ -168,8 +170,11 @@ namespace ScholarStation
 		public void OnTimeSet(TimePicker view, int hour, int minute)
 		{
 			// formats hours to 12hr time
+//			string pm = "PM";
+//			string am = "AM";
 			if (hour == 0)
 				hour = hour + 12;
+				
 			else if (hour > 12)
 				hour = hour - 12;
 			//corrects minutes to the correct format 0-> 00 etc.

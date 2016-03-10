@@ -86,6 +86,7 @@
     <Compile Include="timePicker.cs" />
     <Compile Include="DeleteUtility.cs" />
     <Compile Include="DeleteResponse.cs" />
+    <Compile Include="EditStudyUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

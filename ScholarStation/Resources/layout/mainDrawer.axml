@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:background="#B6B6B6">
     <android.support.v4.widget.DrawerLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
