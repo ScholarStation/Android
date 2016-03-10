@@ -83,7 +83,7 @@ namespace ScholarStation
 			void mMainView_Click(object sender, EventArgs e)
 			{
 				int position =mRecyclerView.GetChildPosition((View)sender);
-				int indexPosition = (mStudyGroup.Count - 1) - position;
+				// THIS LINE OF CODE IS GARBAGE K? ......int indexPosition = (mStudyGroup.Count - 1) - position;
 				Console.WriteLine("CLicked Study Group:"+mStudyGroup[position]._id+"Opening edit menu");
 
 
