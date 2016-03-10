@@ -17,6 +17,40 @@ namespace ScholarStation
 {
 	public class studySessionFragment : Fragment,Android.App.DatePickerDialog.IOnDateSetListener,Android.App.TimePickerDialog.IOnTimeSetListener
 	{
+
+
+		string[] members = new string[5];
+		string studyCourse;
+		string studyTopic ;
+		string studyDate ;
+		string studyTime ;
+		string studyMember1 ;
+		string studyMember2 ;
+		string studyMember3 ;
+		string studyMember4 ;
+		string studyMember5 ;
+
+		StudyGroup sg;
+		bool create;
+		TextView course;
+		TextView topic;
+		TextView date ;
+		TextView time ; 
+		TextView member1;
+		TextView member2 ;
+		TextView member3 ;
+		TextView member4 ;
+		TextView member5 ;
+		public studySessionFragment(StudyGroup sg){
+			
+			this.sg = sg;
+			create = false;
+
+		}
+		public studySessionFragment(){
+			create = true;
+		}
+		
 		public override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
@@ -37,26 +71,28 @@ namespace ScholarStation
 			};
 
 			Button CreateButton = view.FindViewById<Button>(Resource.Id.createSessionButton);
-			string[] members = new string[5];
-			string studyCourse = "";
-			string studyTopic = "";
-			string studyDate = "";
-			string studyTime = "";
-			string studyMember1 = "";
-			string studyMember2 = "";
-			string studyMember3 = "";
-			string studyMember4 = "";
-			string studyMember5 = "";
 
-			TextView course = view.FindViewById<TextView> (Resource.Id.courseStudy);
-			TextView topic = view.FindViewById<TextView> (Resource.Id.SessionTopic);
-			TextView date = view.FindViewById<TextView> (Resource.Id.date);
-			TextView time = view.FindViewById<TextView> (Resource.Id.time);
-			TextView member1 = view.FindViewById<TextView> (Resource.Id.Member1);
-			TextView member2 = view.FindViewById<TextView> (Resource.Id.Member2);
-			TextView member3 = view.FindViewById<TextView> (Resource.Id.Member3);
-			TextView member4 = view.FindViewById<TextView> (Resource.Id.Member4);
-			TextView member5 = view.FindViewById<TextView> (Resource.Id.Member5);
+
+			 course = view.FindViewById<TextView> (Resource.Id.courseStudy);
+			 topic = view.FindViewById<TextView> (Resource.Id.SessionTopic);
+			 date = view.FindViewById<TextView> (Resource.Id.date);
+			 time = view.FindViewById<TextView> (Resource.Id.time);
+			 member1 = view.FindViewById<TextView> (Resource.Id.Member1);
+			 member2 = view.FindViewById<TextView> (Resource.Id.Member2);
+			 member3 = view.FindViewById<TextView> (Resource.Id.Member3);
+			 member4 = view.FindViewById<TextView> (Resource.Id.Member4);
+			 member5 = view.FindViewById<TextView> (Resource.Id.Member5);
+			if(!create){
+			course.Text = sg.topic;
+			date.Text = sg.date;
+			time.Text = sg.time;
+			topic.Text = sg.course;
+			member1.Text =sg.members[0];
+			member2.Text =sg.members[1];
+			member3.Text =sg.members[2];
+			member4.Text =sg.members[3];
+			//member5.Text = sg.members [4];
+			}
 
 			course.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
 				studyCourse = e.Text.ToString();
