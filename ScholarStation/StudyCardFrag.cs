@@ -126,7 +126,6 @@ namespace ScholarStation
 			//mListView = view.FindViewById<ListView> (Resource.Id.lvToDoList);
 			mFab = view.FindViewById<FloatingActionButton> (Resource.Id.fab);
 			mFab.Click += (sender, e) => {
-				Toast.MakeText(Activity, "YOU CLICKED IT", ToastLength.Short).Show();
 				createFragment(null,true);
 			};
 			mStudyGroup = new List<StudyGroup> ();

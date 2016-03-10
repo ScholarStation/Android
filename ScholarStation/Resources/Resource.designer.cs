@@ -1780,6 +1780,9 @@ namespace ScholarStation
 			// aapt resource value: 0x7f070072
 			public const int CreateTutorSession = 2131165298;
 			
+			// aapt resource value: 0x7f0700b1
+			public const int Edit = 2131165361;
+			
 			// aapt resource value: 0x7f070082
 			public const int FragmentLayout = 2131165314;
 			
@@ -1837,26 +1840,26 @@ namespace ScholarStation
 			// aapt resource value: 0x7f07009e
 			public const int StudentYear = 2131165342;
 			
-			// aapt resource value: 0x7f0700b6
-			public const int TutorAge = 2131165366;
-			
-			// aapt resource value: 0x7f0700b3
-			public const int TutorEmail = 2131165363;
-			
-			// aapt resource value: 0x7f0700b1
-			public const int TutorFName = 2131165361;
-			
-			// aapt resource value: 0x7f0700b7
-			public const int TutorGender = 2131165367;
-			
-			// aapt resource value: 0x7f0700b2
-			public const int TutorLName = 2131165362;
-			
-			// aapt resource value: 0x7f0700b4
-			public const int TutorMajor = 2131165364;
+			// aapt resource value: 0x7f0700b8
+			public const int TutorAge = 2131165368;
 			
 			// aapt resource value: 0x7f0700b5
-			public const int TutorYear = 2131165365;
+			public const int TutorEmail = 2131165365;
+			
+			// aapt resource value: 0x7f0700b3
+			public const int TutorFName = 2131165363;
+			
+			// aapt resource value: 0x7f0700b9
+			public const int TutorGender = 2131165369;
+			
+			// aapt resource value: 0x7f0700b4
+			public const int TutorLName = 2131165364;
+			
+			// aapt resource value: 0x7f0700b6
+			public const int TutorMajor = 2131165366;
+			
+			// aapt resource value: 0x7f0700b7
+			public const int TutorYear = 2131165367;
 			
 			// aapt resource value: 0x7f07007c
 			public const int UserName = 2131165308;
@@ -1915,8 +1918,8 @@ namespace ScholarStation
 			// aapt resource value: 0x7f07003d
 			public const int activity_chooser_view_content = 2131165245;
 			
-			// aapt resource value: 0x7f0700c5
-			public const int add = 2131165381;
+			// aapt resource value: 0x7f0700c7
+			public const int add = 2131165383;
 			
 			// aapt resource value: 0x7f070049
 			public const int alertTitle = 2131165257;
@@ -1990,8 +1993,11 @@ namespace ScholarStation
 			// aapt resource value: 0x7f070040
 			public const int default_activity_button = 2131165248;
 			
-			// aapt resource value: 0x7f0700c3
-			public const int deleteStudySession = 2131165379;
+			// aapt resource value: 0x7f0700b2
+			public const int delete = 2131165362;
+			
+			// aapt resource value: 0x7f0700c5
+			public const int deleteStudySession = 2131165381;
 			
 			// aapt resource value: 0x7f070070
 			public const int design_menu_item_action_area = 2131165296;
@@ -2008,8 +2014,8 @@ namespace ScholarStation
 			// aapt resource value: 0x7f07000e
 			public const int disableHome = 2131165198;
 			
-			// aapt resource value: 0x7f0700c6
-			public const int discard = 2131165382;
+			// aapt resource value: 0x7f0700c8
+			public const int discard = 2131165384;
 			
 			// aapt resource value: 0x7f070080
 			public const int drawer_layout = 2131165312;
@@ -2017,11 +2023,11 @@ namespace ScholarStation
 			// aapt resource value: 0x7f0700a1
 			public const int editProfile = 2131165345;
 			
-			// aapt resource value: 0x7f0700c4
-			public const int editStudySession = 2131165380;
+			// aapt resource value: 0x7f0700c6
+			public const int editStudySession = 2131165382;
 			
-			// aapt resource value: 0x7f0700b8
-			public const int editTutorProfile = 2131165368;
+			// aapt resource value: 0x7f0700ba
+			public const int editTutorProfile = 2131165370;
 			
 			// aapt resource value: 0x7f07005c
 			public const int edit_query = 2131165276;
@@ -2134,17 +2140,17 @@ namespace ScholarStation
 			// aapt resource value: 0x7f070015
 			public const int multiply = 2131165205;
 			
-			// aapt resource value: 0x7f0700c7
-			public const int nav_home = 2131165383;
-			
-			// aapt resource value: 0x7f0700c8
-			public const int nav_profile = 2131165384;
-			
 			// aapt resource value: 0x7f0700c9
-			public const int nav_study = 2131165385;
+			public const int nav_home = 2131165385;
 			
 			// aapt resource value: 0x7f0700ca
-			public const int nav_tutor = 2131165386;
+			public const int nav_profile = 2131165386;
+			
+			// aapt resource value: 0x7f0700cb
+			public const int nav_study = 2131165387;
+			
+			// aapt resource value: 0x7f0700cc
+			public const int nav_tutor = 2131165388;
 			
 			// aapt resource value: 0x7f070083
 			public const int nav_view = 2131165315;
@@ -2317,8 +2323,8 @@ namespace ScholarStation
 			// aapt resource value: 0x7f0700aa
 			public const int textView5 = 2131165354;
 			
-			// aapt resource value: 0x7f0700bd
-			public const int textView6 = 2131165373;
+			// aapt resource value: 0x7f0700bf
+			public const int textView6 = 2131165375;
 			
 			// aapt resource value: 0x7f070071
 			public const int textview1 = 2131165297;
@@ -2347,32 +2353,32 @@ namespace ScholarStation
 			// aapt resource value: 0x7f070014
 			public const int useLogo = 2131165204;
 			
-			// aapt resource value: 0x7f0700b9
-			public const int vCourse = 2131165369;
-			
 			// aapt resource value: 0x7f0700bb
-			public const int vDate = 2131165371;
+			public const int vCourse = 2131165371;
 			
-			// aapt resource value: 0x7f0700be
-			public const int vMember1 = 2131165374;
-			
-			// aapt resource value: 0x7f0700bf
-			public const int vMember2 = 2131165375;
+			// aapt resource value: 0x7f0700bd
+			public const int vDate = 2131165373;
 			
 			// aapt resource value: 0x7f0700c0
-			public const int vMember3 = 2131165376;
+			public const int vMember1 = 2131165376;
 			
 			// aapt resource value: 0x7f0700c1
-			public const int vMember4 = 2131165377;
+			public const int vMember2 = 2131165377;
 			
 			// aapt resource value: 0x7f0700c2
-			public const int vMember5 = 2131165378;
+			public const int vMember3 = 2131165378;
+			
+			// aapt resource value: 0x7f0700c3
+			public const int vMember4 = 2131165379;
+			
+			// aapt resource value: 0x7f0700c4
+			public const int vMember5 = 2131165380;
+			
+			// aapt resource value: 0x7f0700be
+			public const int vTime = 2131165374;
 			
 			// aapt resource value: 0x7f0700bc
-			public const int vTime = 2131165372;
-			
-			// aapt resource value: 0x7f0700ba
-			public const int vTopic = 2131165370;
+			public const int vTopic = 2131165372;
 			
 			// aapt resource value: 0x7f07000a
 			public const int view_offset_helper = 2131165194;

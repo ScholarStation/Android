@@ -71,7 +71,8 @@ namespace ScholarStation
 			};
 
 			Button CreateButton = view.FindViewById<Button>(Resource.Id.createSessionButton);
-
+			Button DeleteButton = view.FindViewById<Button> (Resource.Id.delete);
+			Button EditButton = view.FindViewById<Button> (Resource.Id.Edit);
 
 			 course = view.FindViewById<TextView> (Resource.Id.courseStudy);
 			 topic = view.FindViewById<TextView> (Resource.Id.SessionTopic);
@@ -82,16 +83,20 @@ namespace ScholarStation
 			 member3 = view.FindViewById<TextView> (Resource.Id.Member3);
 			 member4 = view.FindViewById<TextView> (Resource.Id.Member4);
 			 member5 = view.FindViewById<TextView> (Resource.Id.Member5);
-			if(!create){
-			course.Text = sg.topic;
-			date.Text = sg.date;
-			time.Text = sg.time;
-			topic.Text = sg.course;
-			member1.Text =sg.members[0];
-			member2.Text =sg.members[1];
-			member3.Text =sg.members[2];
-			member4.Text =sg.members[3];
-			//member5.Text = sg.members [4];
+			if (!create) {
+				course.Text = sg.topic;
+				date.Text = sg.date;
+				time.Text = sg.time;
+				topic.Text = sg.course;
+				member1.Text = sg.members [0];
+				member2.Text = sg.members [1];
+				member3.Text = sg.members [2];
+				member4.Text = sg.members [3];
+				//member5.Text = sg.members [4];
+				CreateButton.Visibility = ViewStates.Invisible;
+			} else {
+				DeleteButton.Visibility = ViewStates.Invisible;
+				EditButton.Visibility = ViewStates.Invisible;
 			}
 
 			course.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
