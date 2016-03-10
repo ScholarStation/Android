@@ -138,13 +138,22 @@ namespace ScholarStation
 				Task<StudyResponse> stuff = createStudySession.StudyAsync(LoginInfo.username, LoginInfo.KEY, studyCourse, studyTopic, studyDate, studyTime, members);
 				StudyResponse result = await stuff;
 				var ft = FragmentManager.BeginTransaction ();
-				ft.Replace (Resource.Id.FragmentLayout, new homeScreenFragment ());
+				ft.Replace (Resource.Id.FragmentLayout, new StudyCardFrag ());
 				ft.AddToBackStack (null);
 				ft.Commit ();
 				Toast.MakeText (Activity,"Study Group Created", ToastLength.Short).Show ();
 			};
-						
 
+			DeleteButton.Click += async (sender, e) => {
+				DeleteUtility deleteStudySession = new DeleteUtility();
+				Task<DeleteResponse> dResponse = deleteStudySession.DeleteAsync(LoginInfo.username, LoginInfo.KEY, sg._id);
+				DeleteResponse deleteResult = await dResponse;
+				var ft = FragmentManager.BeginTransaction ();
+				ft.Replace (Resource.Id.FragmentLayout, new StudyCardFrag ());
+				ft.AddToBackStack (null);
+				ft.Commit ();
+				Toast.MakeText (Activity,"Study Group Deleted", ToastLength.Short).Show ();
+			};
 			return view;
 		}
 			
