@@ -1,74 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:text="Class"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/studyClass" />
-    <TextView
-        android:text="Session Topic"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/sessionTopic" />
-    <TextView
-        android:text="Enter Date"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
-    <EditText
-        android:inputType="date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText1" />
-    <TextView
-        android:text="Enter Time"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4" />
-    <EditText
-        android:inputType="time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText2" />
-    <Button
-        android:text="Invite Members"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/InviteStudyMembers"
-        android:background="#ff43a047" />
     <LinearLayout
         android:orientation="vertical"
-        android:minWidth="25px"
-        android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="225.5dp"
-        android:id="@+id/linearLayout1">
+        android:layout_height="match_parent"
+        android:background="#B6B6B6"
+        android:id="@+id/linearLayout2"
+        android:scrollbars="vertical"
+        android:overScrollMode="ifContentScrolls">
         <TextView
-            android:text="Members"
+            android:text="Class"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView5" />
+            android:textColor="@android:color/white"
+            android:id="@+id/textView1" />
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:id="@+id/courseStudy" />
+        <TextView
+            android:text="Session Topic"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:id="@+id/textView2" />
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:id="@+id/SessionTopic" />
+        <TextView
+            android:text="Date"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:id="@+id/textView3" />
+        <EditText
+            android:inputType="date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:focusable="false"
+            android:id="@+id/date" />
+        <TextView
+            android:text="Time"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:id="@+id/textView4"
+            android:layout_margin="0dp" />
+        <EditText
+            android:inputType="time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:focusable="false"
+            android:id="@+id/time"
+            android:layout_margin="0dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="197.5dp"
+            android:id="@+id/linearLayout1">
+            <TextView
+                android:text="Enter Members Username"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:id="@+id/textView5" />
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Member1"
+                android:hint="Enter Member Name Here" />
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Member2"
+                android:hint="Enter Member Name Here" />
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Member3"
+                android:hint="Enter Member Name Here" />
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Member4"
+                android:hint="Enter Member Name Here" />
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Member5"
+                android:hint="Enter Member Name Here" />
+        </LinearLayout>
+        <Button
+            android:text="Create Session"
+            android:layout_width="match_parent"
+            android:layout_height="34.5dp"
+            android:layout_margin="5dp"
+            android:id="@+id/createSessionButton"
+            android:background="#ff039be5" />
+        <Button
+            android:text="Edit Study Session"
+            android:layout_width="match_parent"
+            android:layout_height="34.5dp"
+            android:id="@+id/Edit"
+            android:background="#ff43a047"
+            android:layout_margin="5dp" />
+        <Button
+            android:text="Delete Study Session"
+            android:layout_width="match_parent"
+            android:layout_height="34.5dp"
+            android:id="@+id/delete"
+            android:layout_margin="5dp"
+            android:background="#ff1e88e5" />
     </LinearLayout>
-    <Button
-        android:text="Create Session"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/createSessionButton"
-        android:background="#ff039be5" />
-</LinearLayout>
+</ScrollView>

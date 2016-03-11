@@ -7,8 +7,9 @@
         android:text="Create Tutor Session"
         android:layout_width="match_parent"
         android:layout_height="73.5dp"
+        android:layout_margin="10dp"
         android:id="@+id/CreateTutorSession"
-        android:background="#ff039be5" />
+        android:background="#ff43a047" />
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -26,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="73.0dp"
             android:id="@+id/CreateStudySession"
-            android:background="#ff43a047" />
+            android:background="#ff039be5" />
         <LinearLayout
             android:orientation="vertical"
             android:minWidth="25px"
@@ -42,6 +43,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1">
+        <Button
+            android:text="View Study Session"
+            android:layout_width="match_parent"
+            android:layout_height="75.0dp"
+            android:id="@+id/ViewSS"
+            android:background="#ff43a047" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout5" />
         <Button
             android:text="Profile"
             android:layout_width="match_parent"

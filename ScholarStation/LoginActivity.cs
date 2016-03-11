@@ -7,12 +7,12 @@ using Android.Content;
 
 namespace ScholarStation
 {
-	[Activity (Label = "Log In")]	
+	[Activity (Label = "Log In",Icon = "@mipmap/icon")]	
 	public class LoginActivity : Activity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
-			//string tag = "FUCK";
+			
 			//Log.Info(tag, "STUFF WILL HAPPEN");
 			base.OnCreate (savedInstanceState);
 			string username = "";
@@ -48,13 +48,16 @@ namespace ScholarStation
 						intent.PutExtras(b);
 
 						StartActivity(intent);
+
+						LoginInfo.username = result.username;
+						LoginInfo.KEY = result.KEY;
 					}else{
 						Android.App.AlertDialog.Builder builder = new AlertDialog.Builder(this);
 						AlertDialog alertDialog = builder.Create();
 						alertDialog.SetTitle("Login Failed");
 						alertDialog.SetMessage("Login Failed, Please Try Again");
 						alertDialog.Show();
-						//string tag = "FUCK";
+
 						//Log.Info(tag, "STUFF WILL HAPPEN"+ result.ToString());
 					}
 				}

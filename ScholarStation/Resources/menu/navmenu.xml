@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <group android:checkableBehavior="single">
+    <item
+      android:id="@+id/nav_home"
+      android:icon="@drawable/mriknow2"
+      android:title="Home" />
+    <item
+      android:id="@+id/nav_profile"
+      android:icon="@drawable/ic_account_circle_black_24dp"
+      android:title="Profile" />
+    <item
+      android:id="@+id/nav_study"
+      android:icon="@drawable/ic_group_work_black_24dp"
+      android:title="Study Session" />
+    <item
+      android:id="@+id/nav_tutor"
+      android:icon="@drawable/ic_devices_black_24dp"
+      android:title="Tutor Session" />
+  </group> 
+
+</menu>
+
