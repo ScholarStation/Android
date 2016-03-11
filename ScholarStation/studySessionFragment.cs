@@ -39,6 +39,7 @@ namespace ScholarStation
 
 		}
 		public studySessionFragment(){
+			this.sg = new StudyGroup();
 			create = true;
 		}
 		
@@ -170,13 +171,16 @@ namespace ScholarStation
 		public void OnTimeSet(TimePicker view, int hour, int minute)
 		{
 			// formats hours to 12hr time
-//			string pm = "PM";
-//			string am = "AM";
-			if (hour == 0)
+			string something;
+			if (hour == 0) {
 				hour = hour + 12;
-				
-			else if (hour > 12)
+				something = "AM";
+			} else if (hour > 12) {
 				hour = hour - 12;
+				something = "PM";
+			} else {
+				something = "AM";
+			}
 			//corrects minutes to the correct format 0-> 00 etc.
 			string formattedMinutes;
 			switch (minute) {
@@ -215,7 +219,7 @@ namespace ScholarStation
 				break;
 			}
 
-			string  timeString= string.Format ("{0}:{1}", hour, formattedMinutes);
+			string timeString = string.Format ("{0}:{1} {2}", hour, formattedMinutes, something);
 			View.FindViewById<EditText> (Resource.Id.time).Text = timeString;
 		}
 	}
