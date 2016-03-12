@@ -87,6 +87,9 @@
     <Compile Include="DeleteUtility.cs" />
     <Compile Include="DeleteResponse.cs" />
     <Compile Include="EditStudyUtility.cs" />
+    <Compile Include="WebUtility.cs" />
+    <Compile Include="WebRequest.cs" />
+    <Compile Include="WebResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
