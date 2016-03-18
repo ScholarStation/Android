@@ -14,5 +14,6 @@ namespace ScholarStation.WebUtil.Login
 {
     class LoginReq : WebRequest
     {
+        public string password { get; set; }
     }
 }

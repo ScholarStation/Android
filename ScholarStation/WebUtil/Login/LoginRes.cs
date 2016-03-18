@@ -14,5 +14,6 @@ namespace ScholarStation.WebUtil.Login
 {
     class LoginRes : WebResponse
     {
+        public string KEY { get; set; }
     }
 }

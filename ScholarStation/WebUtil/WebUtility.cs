@@ -37,8 +37,8 @@ namespace ScholarStation
 
 		//URL stings
 		private const string Login = "http://70.187.52.39:3000/LoginApp";
-		private const string ProfileReq = "http://70.187.52.39:3000/ProfileApp";
-		private const string ProfileEdt = "...";//not implemented
+		private const string ProfileReq = "http://70.187.52.39:3000/ProfileUtility";
+		private const string ProfileEdt = "http://70.187.52.39:3000/ProfileUtility/EditByID";//not implemented
 		private const string StudyReq = "http://70.187.52.39:3000/StudyUtility/GetStudyGroupsByMember";
 		private const string StudyCrt = "http://70.187.52.39:3000/StudyUtility/Create";
 		private const string StudyEdt = "http://70.187.52.39:3000/StudyUtility/EditByID";
