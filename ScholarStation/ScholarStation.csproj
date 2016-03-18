@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -87,9 +87,25 @@
     <Compile Include="DeleteUtility.cs" />
     <Compile Include="DeleteResponse.cs" />
     <Compile Include="EditStudyUtility.cs" />
-    <Compile Include="WebUtility.cs" />
-    <Compile Include="WebRequest.cs" />
-    <Compile Include="WebResponse.cs" />
+    <Compile Include="WebUtil\Login\LoginReq.cs" />
+    <Compile Include="WebUtil\Login\LoginRes.cs" />
+    <Compile Include="WebUtil\Profile\ProfileEdtReq.cs" />
+    <Compile Include="WebUtil\Profile\ProfileEdtRes.cs" />
+    <Compile Include="WebUtil\Profile\ProfileReq.cs" />
+    <Compile Include="WebUtil\Profile\ProfileRes.cs" />
+    <Compile Include="WebUtil\StudyGroup\StudyCrtReq.cs" />
+    <Compile Include="WebUtil\StudyGroup\StudyCrtRes.cs" />
+    <Compile Include="WebUtil\StudyGroup\StudyDelReq.cs" />
+    <Compile Include="WebUtil\StudyGroup\StudyDelRes.cs" />
+    <Compile Include="WebUtil\StudyGroup\StudyEdtReq.cs" />
+    <Compile Include="WebUtil\StudyGroup\StudyEdtRes.cs" />
+    <Compile Include="WebUtil\StudyGroup\StudyReq.cs" />
+    <Compile Include="WebUtil\StudyGroup\StudyRes.cs" />
+    <Compile Include="WebUtil\StudyGroup\StudySrcReq.cs" />
+    <Compile Include="WebUtil\StudyGroup\StudySrcRes.cs" />
+    <Compile Include="WebUtil\WebUtility.cs" />
+    <Compile Include="WebUtil\WebRequest.cs" />
+    <Compile Include="WebUtil\WebResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -128,9 +144,6 @@
     <AndroidResource Include="Resources\menu\actionbar..xml" />
     <AndroidResource Include="Resources\drawable\web_hi_res_512.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\drawable\" />
-    <Folder Include="Resources\menu\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
