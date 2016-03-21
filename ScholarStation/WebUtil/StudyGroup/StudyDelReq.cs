@@ -14,5 +14,6 @@ namespace ScholarStation.WebUtil.StudyGroup
 {
     class StudyDelReq:WebRequest
     {
+        public string _id { get; set; }
     }
 }

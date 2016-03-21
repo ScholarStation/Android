@@ -14,5 +14,12 @@ namespace ScholarStation.WebUtil.StudyGroup
 {
     class StudyCrtReq:WebRequest
     {
+        public string owner { get; set; }
+        public string _id { get; set; }
+        public string course { get; set; }
+        public string topic { get; set; }
+        public string date { get; set; }
+        public string time { get; set; }
+        public string[] members { get; set; }
     }
 }

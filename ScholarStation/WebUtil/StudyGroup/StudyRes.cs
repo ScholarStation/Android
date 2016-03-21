@@ -14,5 +14,6 @@ namespace ScholarStation.WebUtil.StudyGroup
 {
     class StudyRes:WebResponse
     {
+        public StudyGroup[] studyGroups { get; set; }
     }
 }

@@ -14,5 +14,6 @@ namespace ScholarStation.WebUtil.StudyGroup
 {
     class StudySrcReq:WebRequest
     {
+        // Filter
     }
 }
